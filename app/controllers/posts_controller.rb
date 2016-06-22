@@ -20,6 +20,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(title: params[:title], content: params[:content])
+    redirect_to user_posts_path(current_user.id)
   end
 
   def destroy
