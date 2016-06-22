@@ -12,11 +12,11 @@ gem 'devise'
 gem 'jbuilder', '~> 2.0'
 gem 'rails-erd'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'better_errors'
 
 
 group :development, :test do
-  gem 'byebug'
-  gem 'rails-pry'
+  gem 'pry-rails'
 end
 
 group :development do

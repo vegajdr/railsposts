@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
-  resource :users do
-    resource :posts
+  root 'users#index'
+
+  resources :users do
+    resources :posts, shallow: true
   end
+
+  # resources :users
+  # resources :posts
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

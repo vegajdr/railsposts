@@ -1,0 +1,15 @@
+Post Index
+<ul>
+  <% @posts.each do |post| %>
+  <li>
+    <%= post.title %>
+    <%= post.content %>
+    <%= post.updated_at.to_time %>
+    <%= button_to "X", post_path(post.id), method: :delete %>
+    <%= link_to "Edit", edit_post_path(post.id) %>
+
+  </li>
+  <% end %>
+</ul>
+
+  <%= link_to "New Post", new_user_post_path %>
